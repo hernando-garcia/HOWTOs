@@ -1,6 +1,21 @@
 
-Github containes all of the below
----------------------------------
+Github HOWTO
+------------
+
+Pre-req
+
+1) SSH public key uploaded and tested in github. See:
+
+https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
+
+2) Adding an existing project to GitHub using the command line. See:
+
+https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+
+or
+
+3) Follow the steps below.
+
 $ git init
 Initialized empty Git repository in /home/hgarcia/Github/.git/
 
