@@ -1,22 +1,22 @@
 Pre-reqs
 --------
 
-Since Github needs to be able to access the Jenkins Master, which in my case runs on my laptop. 
+Since https://github.com needs to be able to access the Jenkins Master, which in my case runs on my laptop, behind a public address (the one my ISP assigned via DHCP to my home router) and NATed (done at the home router so nothing I need to do here) to a private one (home network)  
 
-1) The router (home) must be able to allow access via port forwarding to port 8080 on the public IP
+1) My home router (My ISP is BT btw) must be able to allow https://github.com access (via port forwarding - home router) to port 8080 on the public IP that redirects the connection to my laptop on my private network on the same port.
 
 Steps
 -----
 
-Create the webhook in the Github's repository you want to Genkins to run automatically upon a push (defult) is executed. 
+Create the webhook in the Github's repository you want Jenkins to run automatically upon a push (defult) is executed as follow:
 
-https://github.com/hernando-garcia/jenkins
-(jenkins repo) -> Settings -> Webhooks -> Add webhook.
+* https://github.com/hernando-garcia/jenkins
+  (jenkins repo) -> Settings -> Webhooks -> Add webhook.
 
-Payload URL = <Public-IP>:8080/github-webhook/
-Content type = application/json
-Secret = Jenkins Admin password
-Which events would youn like to trigger this webhook? = Just push event.
-Select -> Active
-Click on -> Create webhook
-Check under thr Recent Deliveries to see if the webhook has been able to be pinged from Github.
+* Payload URL = <Public-IP>:8080/github-webhook/
+* Content type = application/json
+* Secret = Jenkins Admin password
+* Which events would youn like to trigger this webhook? = Just push event.
+* Select -> Active
+* Click on -> Create webhook
+* Check under thr Recent Deliveries to see if the webhook has been able to be pinged from Github.
